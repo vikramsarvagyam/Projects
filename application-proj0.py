@@ -2,11 +2,11 @@ import pandas as pd
 import mysql.connector as mysql
 from mysql.connector import Error
 
-table1 = pd.read_csv('C:\\Users\\vikra\\Documents\\REVATURE-TRAINING\\Project0-table1.csv', index_col=False, delimiter = ',')
+table1 = pd.read_csv('xxx.csv', index_col=False, delimiter = ',')
 table1.head()
-table2 = pd.read_csv('C:\\Users\\vikra\\Documents\\REVATURE-TRAINING\\Project0-table2.csv', index_col=False, delimiter = ',')
+table2 = pd.read_csv('xxx.csv', index_col=False, delimiter = ',')
 table2.head()
-table3 = pd.read_csv('C:\\Users\\vikra\\Documents\\REVATURE-TRAINING\\Project0-table3.csv', index_col=False, delimiter = ',')
+table3 = pd.read_csv('xxx.csv', index_col=False, delimiter = ',')
 table3.head()
 
 def menu():
@@ -31,7 +31,7 @@ def action(number):
 
 def create_db():
     try:
-        conn = mysql.connect(host='localhost',  user='root', password='Viklqs#39041')
+        conn = mysql.connect(host='localhost',  user='root', password='********')
         if conn.is_connected():
             cursor = conn.cursor()
             cursor.execute("DROP DATABASE IF EXISTS School")
@@ -42,7 +42,7 @@ def create_db():
 
 def create_tables():
     try:
-        conn = mysql.connect(host='localhost', database='school', user='root', password='Viklqs#39041')
+        conn = mysql.connect(host='localhost', database='school', user='root', password='********')
         if conn.is_connected():
             cursor = conn.cursor()
             cursor.execute("select database();")
@@ -81,7 +81,7 @@ def create_tables():
 
 def read_and_display():
     try:
-        conn = mysql.connect(host='localhost', database='school', user='root', password='Viklqs#39041')
+        conn = mysql.connect(host='localhost', database='school', user='root', password='********')
         if conn.is_connected():
             cursor = conn.cursor()
             table = input("Enter table from which you want the query from: ")
@@ -113,7 +113,7 @@ def read_and_display():
 
 def update():
     try:
-        conn = mysql.connect(host='localhost', database='school', user='root', password='Viklqs#39041')
+        conn = mysql.connect(host='localhost', database='school', user='root', password='********')
         if conn.is_connected():
             cursor = conn.cursor()
             update_query = input("Enter query: ")
@@ -125,7 +125,7 @@ def update():
 
 def delete():
     try:
-        conn = mysql.connect(host='localhost', database='school', user='root', password='Viklqs#39041')
+        conn = mysql.connect(host='localhost', database='school', user='root', password='********')
         if conn.is_connected():
             cursor = conn.cursor()
             delete_query = input("Enter query: ")
@@ -138,7 +138,7 @@ def delete():
 
 def insert():
     try:
-        conn = mysql.connect(host='localhost', database='school', user='root', password='Viklqs#39041')
+        conn = mysql.connect(host='localhost', database='school', user='root', password='********')
         if conn.is_connected():
             cursor = conn.cursor()
             insert_query = input("Enter query: ")
